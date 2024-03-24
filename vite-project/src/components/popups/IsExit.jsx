@@ -1,4 +1,4 @@
-export function UserInfo() {
+export function IsExit() {
     return (
         <div class="pop-exit" id="popExit">
 				<div class="pop-exit__container">
