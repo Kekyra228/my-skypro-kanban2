@@ -1,12 +1,17 @@
 import { Card } from "./Card";
 
-export function Column() {
+
+
+export function Column({status, tasks}) {
     return (
         <div className="main__column column">
 							<div className="column__title">
-								<p>Без статуса</p>
+								<p>{status}</p>
 							</div>
-							<Card/>
+							{
+                                tasks.map((task)=>
+                                <Card key={task.id} {...task}/>)
+                            }
 						</div>	
     )
 }
